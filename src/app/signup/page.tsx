@@ -80,7 +80,7 @@ function SignupForm() {
       });
 
       if (result?.error) {
-        window.location.href = `/login?callbackUrl=${encodeURIComponent(callbackUrl)}`;
+        setError("Account created, but automatic sign in failed. Please sign in with your new credentials.");
         return;
       }
 
